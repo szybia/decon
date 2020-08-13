@@ -1,3 +1,7 @@
+#   Ignore the binary
+./rest
+
+
 
 # Created by https://www.toptal.com/developers/gitignore/api/go
 # Edit at https://www.toptal.com/developers/gitignore?templates=go
@@ -24,3 +28,4 @@
 /Godeps/
 
 # End of https://www.toptal.com/developers/gitignore/api/go
+
