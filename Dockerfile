@@ -25,5 +25,7 @@ WORKDIR /app
 COPY --from=upx /app/decon .
 
 ENV GIN_MODE release
+ENV DECON_ENDPOINT decon:80
+ENV DECON_REDIS_ADDR redis:6397
 
 CMD [ "./decon" ]
