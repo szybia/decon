@@ -7,8 +7,6 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-var registeredRoutes gin.RoutesInfo
-
 type responseRoute struct {
 	Href  string   `json:"href"`
 	Verbs []string `json:"verbs"`
@@ -16,14 +14,7 @@ type responseRoute struct {
 
 type responseRoutes map[string]responseRoute
 
-// CreateRoutes adds the routes to the router
-func CreateRoutes(router *gin.Engine) {
-	//	GET routes
-	router.GET("/", getRoot)
-
-	//	Store routes for root  "GET /"  request to list all routes
-	registeredRoutes = router.Routes()
-}
+var registeredRoutes gin.RoutesInfo
 
 func getRoot(c *gin.Context) {
 	routesResponse := make(responseRoutes, len(registeredRoutes))
