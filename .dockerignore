@@ -3,3 +3,4 @@
 !/internal/
 !go.sum
 !go.mod
+!Makefile
